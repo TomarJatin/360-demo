@@ -25,7 +25,7 @@ const CanvasVideo = () => {
 
     window.addEventListener("resize", resizeCanvas);
 
-    const frameCount = 206;
+    const frameCount = 199;
     const images: HTMLImageElement[] = [];
     const imageSeq = { frame: 1 };
 
@@ -87,10 +87,12 @@ const CanvasVideo = () => {
 };
 
 function files(index: number): string {
-  return `./canvas/canvas (${index + 1}).png`;
+  const paddedIndex = (index + 1).toString().padStart(3, '0');
+  return `./space/ezgif-frame-${paddedIndex}.jpg`;
 }
 
 function scaleImage(img: HTMLImageElement, ctx: CanvasRenderingContext2D) {
+  if(!img) return;
   const canvas = ctx.canvas;
   const hRatio = canvas.width / img.width;
   const vRatio = canvas.height / img.height;
