@@ -45,7 +45,7 @@ const ChatImage = () => {
         </div>
       </div> */}
       <div className="flex flex-col justify-center items-center h-screen w-full">
-        <p className="text-white text-7xl font-bold">Welcome to 360 World</p>
+        <p className="text-white text-7xl font-bold ">Welcome to 360 World</p>
       </div>
     </>
   );

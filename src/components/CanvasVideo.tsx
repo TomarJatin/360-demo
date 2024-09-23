@@ -25,7 +25,6 @@ const CanvasVideo = () => {
 
     window.addEventListener("resize", resizeCanvas);
 
-    const frameCount = 399;
     const images: HTMLImageElement[] = [];
     const imageSeq = { frame: 1 };
 
@@ -53,17 +52,15 @@ const CanvasVideo = () => {
 
     ctl
       .to(imageSeq, {
-        frame: frameCount - 1,
+        frame: 399,
         snap: "frame",
         ease: `none`,
         onUpdate: render,
       })
       .to(canvas, {
-        transform: "scale(.2)",
+        transform: "scale(1)",
         opacity: 0,
-        top: "11%",
-        left: "-2.3%",
-        width: "88%",
+       
       });
 
     images[1].onload = render;
