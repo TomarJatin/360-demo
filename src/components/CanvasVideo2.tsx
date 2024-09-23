@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CanvasVideo = () => {
+const CanvasVideo2 = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -35,15 +35,9 @@ const CanvasVideo = () => {
       images.push(img);
     }
 
-    for (let i = 0; i < 199; i++) {
-      const img = new Image();
-      img.src = files2(i);
-      images.push(img);
-    }
-
     const ctl = gsap.timeline({
       scrollTrigger: {
-        scrub: 1,
+        scrub: 0.15,
         trigger: `#canvas-card>canvas`,
         start: `top top`,
         end: `300% top`,
@@ -94,13 +88,9 @@ const CanvasVideo = () => {
 
 function files(index: number): string {
   const paddedIndex = (index + 1).toString().padStart(3, '0');
-  return `./new/ezgif-frame-${paddedIndex}.jpg`;
+  return `./space/ezgif-frame-${paddedIndex}.jpg`;
 }
 
-function files2(index: number): string {
-  const paddedIndex = (index + 1).toString().padStart(3, '0');
-  return `./earth/ezgif-frame-${paddedIndex}.jpg`;
-}
 
 function scaleImage(img: HTMLImageElement, ctx: CanvasRenderingContext2D) {
   if(!img) return;
@@ -124,4 +114,4 @@ function scaleImage(img: HTMLImageElement, ctx: CanvasRenderingContext2D) {
   );
 }
 
-export default CanvasVideo;
+export default CanvasVideo2;

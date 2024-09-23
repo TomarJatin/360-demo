@@ -3,8 +3,8 @@ import React from "react";
 const ChatImage = () => {
   return (
     <>
-      <img src="/imgs/iPad Pro 11 Inches.png" alt="Iphone" />
-      <div id="chat">
+      {/* <img src="/imgs/iPad Pro 11 Inches.png" alt="Iphone" /> */}
+      {/* <div id="chat">
         <div className="message">
           <div className="wrap">
             <p>
@@ -43,6 +43,9 @@ const ChatImage = () => {
             </p>
           </div>
         </div>
+      </div> */}
+      <div className="flex flex-col justify-center items-center h-screen w-full">
+        <p className="text-white text-7xl font-bold">Welcome to 360 World</p>
       </div>
     </>
   );
